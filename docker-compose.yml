@@ -1,0 +1,25 @@
+version: '3.1'
+
+services:  
+    php:
+      build: .
+      ports:
+      - "80:80"
+      - "443:443"
+      volumes:
+      - ./www:/var/www/html
+    
+    db:
+      image: mysql:5.7
+      volumes:
+        - /var/lib/mysql
+      environment:
+        - MYSQL_ROOT_PASSWORD=phprs
+        - MYSQL_DATABASE=phprs
+
+    adminer:
+      image: adminer
+      restart: on-failure
+      container_name: adminer
+      ports:
+        - 8080:8080
