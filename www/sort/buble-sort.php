@@ -8,26 +8,26 @@ randArray(100, 100000);
 
 function randArray($interval, $size){
   for($i = 0; $i < $size; $i++){
-    $alist[$i] = rand(0, $interval);    
+    $array[$i] = rand(0, $interval);    
   }
-  bubbleSort($alist);
+  bubbleSort($array);
 }
 
-function bubbleSort($alist)
+function bubbleSort($array)
 {
-  for($i = 0; $i < count($alist); $i++)
+  for($i = 0; $i < count($array); $i++)
   {
-    for($j = 0; $j < count($alist) - 1; $j++)
+    for($j = 0; $j < count($array) - 1; $j++)
     {
-      if( $alist[$j] > $alist[$j+1])
+      if( $array[$j] > $array[$j+1])
       {
-        $temp = $alist[$j];
-        $alist[$j] = $alist[$j+1];
-        $alist[$j+1] = $temp;      
+        $temp = $array[$j];
+        $array[$j] = $array[$j+1];
+        $array[$j+1] = $temp;      
       }      
     }    
   }
-  print_r($alist);
+  print_r($array);
 }
 
 ?>
