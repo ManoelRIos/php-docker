@@ -1,5 +1,5 @@
 <?php
 
-class carrinho{
+class Carrinho {
   private $pedido = new Pedido();
 }

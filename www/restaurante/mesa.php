@@ -1,7 +1,5 @@
 <?php
 
-include("pedido.php");
-
 class mesa{
   public $id_mesa;
   private $carrinho = new Carrinho();

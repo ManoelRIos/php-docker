@@ -1,6 +1,6 @@
 <?php
 
-class pedido{
+class Pedido{
   public $nome;
   public $valor;
   
